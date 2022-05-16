@@ -2,7 +2,7 @@ import random
 import string
 
 ## first_number is constant so it is equals to 1.
-## second_number is depends to the difficulty_level of users choice.
+## second_number is depends to the difficulty_level of user choice.
 first_number = 1
 second_number = 0
 
