@@ -1,10 +1,5 @@
-from ast import Try
-from multiprocessing.sharedctypes import Value
 import random
 import string
-from tkinter import E
-from turtle import goto
-from more_itertools import first
 
 ## first_number is constant so it is equals to 1.
 ## second_number is depends to the difficulty_level of users choice.
