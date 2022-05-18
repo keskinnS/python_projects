@@ -1,14 +1,11 @@
 import random
-
 # first_number is constant so it is equals to 1.
 # second_number is depends to the difficulty_level of user choice.
 first_number = 1
 second_number = 0
-
 language = str(input(
     "Please choose a language for display: TR for Turkish, EN for English)..."))
 if language.lower() == "en":
-
     difficulty_level = int(input("Please choose a difficulty level 1-2-3"))
     if difficulty_level == 1:
         second_number += 10
@@ -18,17 +15,12 @@ if language.lower() == "en":
         second_number += 100
     else:
         raise ValueError ("Please choose between given range of 1-3")
-
     attempts_list = []
-
-
     def show_score():
         if len(attempts_list) <= 0:
             print("There is currently no high score, it's yours for the taking!")
         else:
             print("The current high score is {} attempts".format(min(attempts_list)))
-
-
     def start_game():
         random_number = int(random.randint(first_number, second_number))
         print("Hello traveler! Welcome to the game of guesses!")
@@ -68,12 +60,9 @@ if language.lower() == "en":
                 print("({})".format(err))
         else:
             print("That's cool, have a good one!")
-
-
     if __name__ == '__main__':
         start_game()
-
-
+        
 elif language.lower() == "tr":
     try:
         difficulty_level = int(input("Lütfen zorluk seviyesi seçiniz 1-2-3"))
@@ -85,18 +74,13 @@ elif language.lower() == "tr":
             second_number += 100
     except ValueError as ve:
         print("Lütfen belirtilen 1-3 zorluk seviyeleri arasından seçim yapın!")
-
     attempts_list = []
-
-
     def show_score():
         if len(attempts_list) <= 0:
             print(
                 "En yüksek skor bulunmamaktadır, en yüksek skorun yeni sahibi olmaya çalışın!")
         else:
             print("En düşük deneme sayısı {} deneme".format(min(attempts_list)))
-
-
     def start_game():
         random_number = int(random.randint(first_number, second_number))
         print("Sayı tahmin etme oyununa hoşgeldin!")
@@ -136,7 +120,5 @@ elif language.lower() == "tr":
                 print("({})".format(err))
         else:
             print("Tekrar görüşürüz!")
-
-
     if __name__ == '__main__':
         start_game()
